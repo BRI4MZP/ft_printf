@@ -6,7 +6,7 @@
 /*   By: briveiro <briveiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:20:26 by briveiro          #+#    #+#             */
-/*   Updated: 2022/12/06 22:28:43 by briveiro         ###   ########.fr       */
+/*   Updated: 2022/12/07 23:26:14 by briveiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+int	ft_printf(char const *content, ...);
+int	ft_printall(va_list args, char str);
 
 #endif
