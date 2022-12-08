@@ -6,12 +6,12 @@
 #    By: briveiro <briveiro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 04:49:40 by briveiro          #+#    #+#              #
-#    Updated: 2022/12/06 22:29:44 by briveiro         ###   ########.fr        #
+#    Updated: 2022/12/08 05:13:25 by briveiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRC = ft_printf.c ft_printf_utilities.c
+SRC = ft_printf.c ft_printf_utilities.c ft_hexa.c ft_dec.c
 AR = ar -rcs
 CCFLAGS = -Wall -Werror -Wextra
 OBJS = $(SRC:.c=.o)
