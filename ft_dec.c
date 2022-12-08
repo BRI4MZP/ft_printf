@@ -6,7 +6,7 @@
 /*   By: briveiro <briveiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 05:09:07 by briveiro          #+#    #+#             */
-/*   Updated: 2022/12/08 06:53:45 by briveiro         ###   ########.fr       */
+/*   Updated: 2022/12/08 07:43:43 by briveiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ int	ft_putnbr(int n)
 {
 	int		num;
 	int		count;
-	int		Tneg;
+	int		tneg;
 
 	num = n;
-	Tneg = 0;
+	tneg = 0;
 	if (num < 0)
 	{
 		ft_putchar('-');
 		num = num * -1;
-		Tneg = 1;
+		tneg = 1;
 	}
 	count = ft_dec_count(num);
 	if (num > 9)
@@ -34,7 +34,7 @@ int	ft_putnbr(int n)
 	}
 	else
 		ft_putchar(num + '0');
-	if (Tneg == 1)
+	if (tneg == 1)
 		return (count + 1);
 	return (count);
 }

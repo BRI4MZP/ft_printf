@@ -6,7 +6,7 @@
 /*   By: briveiro <briveiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 04:04:20 by briveiro          #+#    #+#             */
-/*   Updated: 2022/12/08 07:34:19 by briveiro         ###   ########.fr       */
+/*   Updated: 2022/12/08 07:42:43 by briveiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_puthexa(size_t num, char *hexa)
 		ft_puthexa(num / 16, hexa);
 	ft_putchar(hexa[num % 16]);
 	return (count);
-
 }
 
 int	ft_hexa_count(size_t num)

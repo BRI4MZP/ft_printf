@@ -6,7 +6,7 @@
 /*   By: briveiro <briveiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:25:57 by briveiro          #+#    #+#             */
-/*   Updated: 2022/12/08 07:35:36 by briveiro         ###   ########.fr       */
+/*   Updated: 2022/12/08 08:05:36 by briveiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,35 +19,36 @@
 
 int	ft_printf(char const *content, ...)
 {
-	va_list	args;
-	int		i;
+	int		count;
 	int		result;
+	va_list	args;
 
-	i = 0;
-	result = 0;
 	va_start(args, content);
-	while (content[i])
+	count = 0;
+	result = 0;
+	while (content[count])
 	{
-		if (content[i] != '%')
-			result += ft_putchar(content[i]);
+		if (content[count] == '%')
+			result += ft_printall(args, content[++count]);
 		else
-			result += ft_printall(args, content[++i]);
-		i++;
+			result += ft_putchar(content[count]);
+		count++;
 	}
 	va_end(args);
 	return (result);
 }
 
-// int	main(void)
-// {
-// 	char *y;
-// 	int	i;
-// 	int	p;
-// 	void *h;
+int	main(void)
+{
+	char *y;
+	int	i;
+	int	p;
+	void *h;
 
-// 	p = -2147483647;
-// 	y = "Yepa";
-// 	i = ft_printf("%s", "hola");
-// 	printf("\n%s", "hola");
-// 	return (0);
-// }
+	ft_printf("%c%c", 'a', 'b');
+	// p = -2147483647;
+	// y = "Yepa";
+	// i = ft_printf("%s", "hola");
+	// printf("\n%s", "hola");
+	return (0);
+}

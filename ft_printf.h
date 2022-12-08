@@ -6,7 +6,7 @@
 /*   By: briveiro <briveiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:20:26 by briveiro          #+#    #+#             */
-/*   Updated: 2022/12/08 06:43:02 by briveiro         ###   ########.fr       */
+/*   Updated: 2022/12/08 07:50:57 by briveiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,6 @@ int		ft_puthexa(size_t num, char *hexa);
 int		ft_hexa_count(size_t num);
 int		ft_putnbr(int n);
 int		ft_dec_count(long num);
+int		ft_putmem(unsigned long long num, char *hexa);
+int		ft_putstr(char *c);
 #endif
